@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  traefik:
+    image: traefik:alpine
+    ports:
+      - 80:80
+    volumes:
+      - /docker/traefik:/etc/traefik
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  whoami:
+    image: emilevauge/whoami
+    labels:
+      - traefik.enable=true
+      - "traefik.frontend.rule=Host:whoami.docker.localhost"
