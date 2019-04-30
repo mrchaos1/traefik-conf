@@ -1,4 +1,8 @@
-Create copy traefik.toml.dist to traefik.toml and edit:
+Create copy traefik.toml.dist to traefik.toml and edit
+
+```bash
+cp traefik.toml.dist traefik.toml
+```
 
 Traefik dashboard username and password (default - **admin:password**)
 ```toml
