@@ -1,0 +1,4 @@
+traefik.toml
+.idea/
+.git/
+acme.json
